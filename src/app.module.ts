@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { RanobeModule } from './ranobe/ranobe.module';
+import { ChapterModule } from './chapter/chapter.module';
 
 @Module({
   imports: [
@@ -17,8 +17,8 @@ import { AppService } from './app.service';
       autoLoadEntities: true,
       synchronize: true,
     }),
+    RanobeModule,
+    ChapterModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
 })
 export class AppModule {}

@@ -3,6 +3,8 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { RanobeModule } from './ranobe/ranobe.module';
 import { ChapterModule } from './chapter/chapter.module';
+import { AuthModule } from './auth/auth.module';
+import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
@@ -19,6 +21,8 @@ import { ChapterModule } from './chapter/chapter.module';
     }),
     RanobeModule,
     ChapterModule,
+    AuthModule,
+    UserModule,
   ],
 })
 export class AppModule {}
